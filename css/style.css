@@ -1,0 +1,167 @@
+:root {
+  --cinza-muito-escuro: #100f15;
+  --cinza-medio: #18171f;
+  --cinza-claro: #24232b;
+  --cinza-muito-claro: #53515f;
+  --amarelo: #f3ce6e;
+  --verde: #a4ffaf;
+  --gelo: #e2e1e9;
+
+  font-family: "Saira", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gelo);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cinza-muito-escuro);
+
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1em;
+
+  color: var(--cinza-muito-claro);
+}
+
+.div-maior {
+  width: 300px;
+}
+
+.div-senhaGerada {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--cinza-claro);
+
+  padding: .5em 0.5em;
+}
+
+.novaSenha {
+  width: 85%;
+  background-color: var(--cinza-claro);
+  border: none;
+
+  font-size: 20px;
+
+  color: var(--cinza-muito-claro);
+}
+
+
+
+.btn-copy {
+  width: 20px;
+  height: 20px;
+
+  background: url("../img/copy-icon.png");
+  background-repeat: no-repeat;
+  background-position: contain;
+  background-size: 20px;
+  border: none;
+}
+
+.btn-copy:hover {
+  cursor: pointer;
+}
+
+.btn-copy:active {
+  transform: translateY(5px);
+}
+
+.div-form {
+  margin-top: 1em;
+  background-color: var(--cinza-claro);
+
+  padding: 1em 0.5em;
+}
+
+.div-tamanhoSenha {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 1em;
+}
+
+.texto {
+  font-size: 16px;
+  font-weight: 400;
+
+  align-self: flex-end;
+}
+
+.output-tamanhoSenha {
+  color: var(--verde);
+}
+
+.sec-checkbox {
+  margin-top: 2em;
+}
+
+.div-checkbox {
+  margin-bottom: 1em;
+}
+
+.barra-forca {
+  width: 5px;
+  height: 20px;
+
+  border: solid var(--gelo) 1px;
+  
+}
+
+.level {
+  background-color: var(--amarelo);
+  border: solid var(--amarelo) 1px;
+}
+
+.div-level {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.sec-forca {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: var(--cinza-medio);
+  padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.btn-gerar {
+  background-color: var(--verde);
+  color: var(--cinza-muito-claro);
+
+  border: none;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  margin-top: 1em;
+
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  width: 100%;
+}
+
+.btn-gerar:hover {
+  cursor: pointer;
+}
+
+.btn-gerar:active {
+  transform: translateY(5px);
+
+  background-color: transparent;
+  color: var(--verde);
+
+  outline: 2px solid var(--verde);
+}

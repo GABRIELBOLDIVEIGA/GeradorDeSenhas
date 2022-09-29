@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/input-range.css">
+    <link rel="stylesheet" href="css/input-checkbox.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Gerador de Senhas</title>
+
+  </head>
+
+  <body>
+    <h1>Gerador de Senhas</h1>
+
+    <div class="div-maior">
+
+      <div class="div-senhaGerada">
+        <input type="text" id="senhaGerada" class="novaSenha" value="Sua Senha" readonly>
+        <input type="button" id="copiar" class="btn-copy"></input>
+      </div>
+
+      <div class="div-form">
+
+      <div class="div-tamanhoSenha">
+        <span class="texto">Quantidade de caracteres</span>
+        <output id="rangevalue">8</output>
+      </div>
+  
+      <input type="range" value="8" min="8" max="20" oninput="rangevalue.value=value"/>
+    
+      <section class="sec-checkbox">
+      <form action="">
+        <label class="form-control">
+          <input type="checkbox" id="maiuscula" name="checkbox-checked" checked />
+          <span class="span-checkbox" >Incluir Letras Maiúsculas</span> 
+        </label>
+      
+        <label class="form-control">
+          <input type="checkbox" id="minuscula" name="checkbox-checked" checked />
+          <span class="span-checkbox" >Incluir Letras Minúsculas</span> 
+        </label>
+
+        <label class="form-control">
+          <input type="checkbox" id="numeros" name="checkbox-checked" checked />
+          <span class="span-checkbox" >Incluir Números</span> 
+        </label>
+
+        <label class="form-control">
+          <input type="checkbox" id="simbolos" name="checkbox" />
+          <span class="span-checkbox" >Incluir Simbolos</span>
+        </label>
+      </form>
+      </section>
+
+      <section class="sec-forca">
+        <p>FORÇA</p>
+        <div class="div-level">
+          <span>"level"</span>
+          <div class="barra-forca"></div>
+          <div class="barra-forca"></div>
+          <div class="barra-forca"></div>
+          <div class="barra-forca"></div>
+        </div>
+      </section>
+      
+      <input type="button" value="GERAR" class="btn-gerar" id="btnGerar">  
+      
+    </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+      $("#copiar").click(function () {
+        $("#senhaGerada").select();
+        document.execCommand("copy");
+      });
+    });
+    </script>
+    <script src="js/Submit.js"></script>
+    <script src="js/RangeStyle.js"></script>
+    <script src="js/GeraSenha.js"></script>
+    
+    
+  </body>
+</html>
