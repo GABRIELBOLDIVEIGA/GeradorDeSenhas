@@ -32,7 +32,7 @@ h1 {
 }
 
 .div-maior {
-  width: 300px;
+  width: 320px;
 }
 
 .div-senhaGerada {
@@ -42,20 +42,29 @@ h1 {
 
   background-color: var(--cinza-claro);
 
-  padding: .5em 0.5em;
+  padding: 0.5em 0.5em;
+}
+
+#senhaGerada {
+  transform: translateX(1000vw);
+  width: 1px;
+  height: 1px;
 }
 
 .novaSenha {
-  width: 85%;
   background-color: var(--cinza-claro);
-  border: none;
-
-  font-size: 20px;
-
+  font-size: 18px;
   color: var(--cinza-muito-claro);
+
+  text-align: center;
+  width: 100%;
 }
 
-
+.div-gambiarra {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
 .btn-copy {
   width: 20px;
@@ -109,25 +118,7 @@ h1 {
   margin-bottom: 1em;
 }
 
-.barra-forca {
-  width: 5px;
-  height: 20px;
-
-  border: solid var(--gelo) 1px;
-  
-}
-
-.level {
-  background-color: var(--amarelo);
-  border: solid var(--amarelo) 1px;
-}
-
-.div-level {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-}
-
+/* Secão do indicador de força da senha  */
 .sec-forca {
   display: flex;
   justify-content: space-between;
@@ -136,6 +127,40 @@ h1 {
   padding: 0.5em 0.5em 0.5em 0.5em;
 }
 
+.sec-forca-texto {
+  color: var(--cinza-muito-claro);
+  width: 25%;
+}
+
+.div-level {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nivel {
+  font-size: 16px;
+}
+
+.div-barra {
+  display: flex;
+  padding-left: 0.5em;
+}
+
+.barra-forca {
+  width: 5px;
+  height: 20px;
+
+  margin-right: 0.5em;
+  border: solid var(--gelo) 1px;
+}
+
+.level {
+  background-color: var(--amarelo);
+  border: solid var(--amarelo) 1px;
+}
+
+/* Seção do botão gerar */
 .btn-gerar {
   background-color: var(--verde);
   color: var(--cinza-muito-claro);

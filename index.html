@@ -22,12 +22,13 @@
   </head>
 
   <body>
+    <input type="text" id="senhaGerada" value="Sua Senha" readonly>
     <h1>Gerador de Senhas</h1>
 
     <div class="div-maior">
 
       <div class="div-senhaGerada">
-        <input type="text" id="senhaGerada" class="novaSenha" value="Sua Senha" readonly>
+        <p id="senhaGeradaView" class="novaSenha">Senha aqui</p>
         <input type="button" id="copiar" class="btn-copy"></input>
       </div>
 
@@ -65,33 +66,38 @@
       </section>
 
       <section class="sec-forca">
-        <p>FORÇA</p>
+        <p class="sec-forca-texto">FORÇA</p>
+        
         <div class="div-level">
-          <span>"level"</span>
-          <div class="barra-forca"></div>
-          <div class="barra-forca"></div>
-          <div class="barra-forca"></div>
-          <div class="barra-forca"></div>
+          <span id="nivel">Nivel</span>
+          <div class="div-barra">
+            <div id="senhaFraca" class="barra-forca"></div>
+            <div id="senhaMedia" class="barra-forca"></div>
+            <div id="senhaForte" class="barra-forca"></div>
+            <div id="senhaMuitoForte" class="barra-forca"></div>
+          </div>
         </div>
       </section>
       
       <input type="button" value="GERAR" class="btn-gerar" id="btnGerar">  
-      
+
     </div>
   </div>
+
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
       $(function () {
       $("#copiar").click(function () {
         $("#senhaGerada").select();
         document.execCommand("copy");
+        console.log("Copiado!");
       });
     });
     </script>
     <script src="js/Submit.js"></script>
     <script src="js/RangeStyle.js"></script>
     <script src="js/GeraSenha.js"></script>
-    
-    
+    <script src="js/Forca.js"></script>
+
   </body>
 </html>
