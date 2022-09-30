@@ -9,7 +9,7 @@ class GeraSenha {
     this._upperStr = "ABCDEFGHIJLMNOPQRSTUVWXYZ";
     this._lowerStr = "abcdefghijklmnopqrstuvwxyz";
     this._numberStr = "0123456789";
-    this._symbolStr = "!@#$%^*()+?><:{}[]";
+    this._symbolStr = "!@#$%^*()+?:{}[]";
 
     this.formaPadrao();
   }
