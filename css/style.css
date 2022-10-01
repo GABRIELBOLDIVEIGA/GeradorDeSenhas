@@ -46,9 +46,22 @@ h1 {
 }
 
 #senhaGerada {
-  transform: translateX(1000vw);
   width: 1px;
   height: 1px;
+  border: none;
+}
+
+.esconde-output-senha {
+  margin-top: 0.5em;
+  width: 1px;
+  height: 1px;
+}
+
+.quadrado-preto {
+  width: 20px;
+  height: 20px;
+  background-color: var(--cinza-muito-escuro);
+  transform: translate(-8px, -20px);
 }
 
 .novaSenha {
