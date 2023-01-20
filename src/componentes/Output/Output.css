@@ -1,0 +1,23 @@
+.senha-gerada {
+    display: flex;
+    align-items: center;
+    
+    
+    background-color: #45425d;
+
+    height: 50px;
+    width: 90%;
+
+}
+
+.senha-gerada p {
+    width: 100%;
+    text-align: center;
+}
+
+.senha-gerada button {
+    width: 50px;
+    height: 30px;
+    margin-right: 10px;
+    
+}
