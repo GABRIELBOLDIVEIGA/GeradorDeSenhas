@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Form.css";
 import geraSenha from "../GeraSenha";
 
-export default function Fomr(props) {
+export default function Fomr({senhaNova}) {
     const [inputMaiusculo, setinputMaiusculo] = useState(false);
     const [inputMinusculo, setinputMinusculo] = useState(false);
     const [inputNumero, setinputNumero] = useState(false);
@@ -23,6 +23,7 @@ export default function Fomr(props) {
             case "simbolos":
                 setinputSimbolo(e.target.checked);
                 break;
+            default:
         }
     };
 
@@ -33,7 +34,7 @@ export default function Fomr(props) {
     const Submit = (e) => {
         e.preventDefault();
         const senha = geraSenha(inputRange, inputMaiusculo, inputMinusculo, inputNumero, inputSimbolo);
-        props.senhaNova(senha);
+        senhaNova(senha);
         // console.log("Senha Gerada:", senha);
     };
 

@@ -14,7 +14,7 @@ function App() {
     return (
         <div className="App">
             <h1>Gerador de Senhas</h1>
-            <Output senha={senha} />
+            <Output senha={senha} placeholder={"Nova Senha Aqui"}/>
             <Form senhaNova={(senha) => mostraSenha(senha)} />
         </div>
     );

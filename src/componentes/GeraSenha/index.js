@@ -61,7 +61,7 @@ function validaSenha(senha, maiusculo, minusculo, numero, simbolo) {
         }
     });
 
-    if (contemMaiusculo == maiusculo && contemMinusculo == minusculo && contemNumero == numero && contemSimbolo == simbolo) {
+    if (contemMaiusculo === maiusculo && contemMinusculo === minusculo && contemNumero === numero && contemSimbolo === simbolo) {
         return true;
     }
 

@@ -1,10 +1,17 @@
-import "./Output.css"
+import "./Output.css";
+import copy from "copy-to-clipboard";
 
-export default function Output(props) {
+export default function Output({ senha, placeholder }) {
+    const copiar = () => {
+        copy(senha);
+    };
+
+    console.log(senha);
+
     return (
         <div className="senha-gerada">
-            <p>{props.senha}</p>
-            <button> Copiar </button>
+            {<p>{senha ? senha : placeholder}</p>}
+            <button onClick={copiar}> Copiar </button>
         </div>
-    )
+    );
 }
