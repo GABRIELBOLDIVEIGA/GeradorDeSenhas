@@ -1,15 +1,23 @@
-import './App.css';
-import Output from './componentes/Output';
-import Form from './componentes/Form';
+import "./App.css";
+import Output from "./componentes/Output";
+import Form from "./componentes/Form";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Gerador de Senhas</h1>
-      <Output />
-      <Form />
-    </div>
-  );
+    const [senha, setSenha] = useState("");
+
+    const mostraSenha = (senha) => {
+        setSenha(senha);
+        // console.log("Output: ", senha);
+    };
+
+    return (
+        <div className="App">
+            <h1>Gerador de Senhas</h1>
+            <Output senha={senha} />
+            <Form senhaNova={(senha) => mostraSenha(senha)} />
+        </div>
+    );
 }
 
 export default App;

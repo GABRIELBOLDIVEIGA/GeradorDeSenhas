@@ -13,7 +13,8 @@ export default function geraSenha(tamanho, maiusculo, minusculo, numero, simbolo
         senhaValida = validaSenha(senha, maiusculo, minusculo, numero, simbolo);
     }
 
-    console.log("Senha Gerada:", senha);
+    // console.log("Senha Gerada:", senha);
+    return senha;
 }
 
 function montaPadrao(maiusculo, minusculo, numero, simbolo) {
@@ -30,37 +31,37 @@ function montaPadrao(maiusculo, minusculo, numero, simbolo) {
 function criaSenha(padrao, tamanho) {
     var senha = "";
     for (var i = 0; i < tamanho; i++) {
-        var randomNumber = Math.floor(Math.random() * padrao.length);
-        senha += padrao.substring(randomNumber, randomNumber + 1);
+        var numeroRandomico = Math.floor(Math.random() * padrao.length);
+        senha += padrao.substring(numeroRandomico, numeroRandomico + 1);
     }
 
     return senha;
 }
 
 function validaSenha(senha, maiusculo, minusculo, numero, simbolo) {
-    var containUper = false;
-    var containLower = false;
-    var containNumber = false;
-    var containSymbol = false;
+    var contemMaiusculo = false;
+    var contemMinusculo = false;
+    var contemNumero = false;
+    var contemSimbolo = false;
 
     var senhaAValidar = [...senha];
 
     senhaAValidar.forEach((element) => {
         if (maiusculoStr.includes(element)) {
-            containUper = true;
+            contemMaiusculo = true;
         }
         if (minusculoStr.includes(element)) {
-            containLower = true;
+            contemMinusculo = true;
         }
         if (numeroStr.includes(element)) {
-            containNumber = true;
+            contemNumero = true;
         }
         if (simboloStr.includes(element)) {
-            containSymbol = true;
+            contemSimbolo = true;
         }
     });
 
-    if (containUper == maiusculo && containLower == minusculo && containNumber == numero && containSymbol == simbolo) {
+    if (contemMaiusculo == maiusculo && contemMinusculo == minusculo && contemNumero == numero && contemSimbolo == simbolo) {
         return true;
     }
 

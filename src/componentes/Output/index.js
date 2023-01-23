@@ -1,10 +1,10 @@
 import "./Output.css"
 
-export default function Output() {
+export default function Output(props) {
     return (
         <div className="senha-gerada">
-            <p>12345678901234567890</p>
-            <button />
+            <p>{props.senha}</p>
+            <button> Copiar </button>
         </div>
     )
 }

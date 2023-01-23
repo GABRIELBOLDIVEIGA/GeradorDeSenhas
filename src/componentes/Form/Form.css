@@ -10,8 +10,10 @@
 
 .formulario .slider {
     /* border: 1px solid greenyellow; */
-
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .formulario button {
