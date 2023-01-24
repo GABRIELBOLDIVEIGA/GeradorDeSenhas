@@ -41,4 +41,5 @@
 
 .span-alert {
     margin-top: 10px;
+    visibility: hidden;
 }

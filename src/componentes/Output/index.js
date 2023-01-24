@@ -11,10 +11,10 @@ export default function Output({ senha, placeholder }) {
         <>
             <div className="senha-gerada">
                 {<p>{senha ? senha : placeholder}</p>}
+                
                 <button onClick={copiar}></button>
             </div>
-            {/* <span className="span-alert">Senha Copiada</span> */}
+            <span className="span-alert">Senha Copiada</span>
         </>
     );
 }
-
