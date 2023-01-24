@@ -27,15 +27,18 @@
     border-radius: 5px;
     background-color: transparent;
     margin-right: 10px;
-    background-image: url("../../../public/icon.PNG");
+    background-image: url("../../../public/copy.PNG");
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
 }
 
-
 .senha-gerada button:active {
     transition: all 150ms ease;
-    transform: translateY(-3%);
-    scale: 102%;
+    box-shadow: black 0px 0px;
+    transform: translate(2px, 2px);
+}
+
+.span-alert {
+    margin-top: 10px;
 }

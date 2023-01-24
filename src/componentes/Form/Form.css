@@ -1,6 +1,5 @@
 .formulario {
     width: 85%;
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     color: aliceblue;
@@ -9,6 +8,7 @@
 .formulario P {
     font-weight: 600;
     color: rgba(255, 255, 255, 0.5);
+    margin: 10px 0;
 }
 
 .formulario p span {
@@ -21,10 +21,8 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 15px;
-
     height: 50px;
     font-weight: 600;
-    /* background-color: rgba(255, 255, 255, 0.08); */
     background-color: #ffc900;
     color: black;
     border: 3px solid black;
@@ -55,15 +53,13 @@
 }
 
 .formulario button {
-    
     width: 100%;
     height: 50px;
     margin: 10px 0;
     border-radius: 15px;
     color: black;
     border: 3px solid black;
-    /* background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
-    background-color:  #ffc900;;
+    background-color: #ffc900;
     letter-spacing: 1px;
     font-weight: bold;
     text-transform: uppercase;
@@ -74,10 +70,8 @@
 }
 
 .formulario button:active {
-    transform: translateY(-3%);
-    scale: 102%;
-    /* box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08); */
-
+    box-shadow: black 0px 0px;
+    transform: translate(5px, 5px);
 }
 
 .lista-checkbox label {
@@ -86,17 +80,13 @@
 }
 
 .formulario .lista-checkbox > div {
-    /* color: rgba(255, 255, 255, 0.5); */
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 15px;
-
     width: 100%;
     height: 50px;
     margin-bottom: 20px;
-    /* background-color: rgba(255, 255, 255, 0.08); */
     background-color: #ffc900;
     cursor: pointer;
     color: black;
@@ -105,7 +95,11 @@
 }
 
 .lista-checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding-left: 15px;
+    /* border: 1px solid red; */
 }
 
 /* ******************************************* */
@@ -114,23 +108,57 @@
     -webkit-appearance: none;
     width: 50%;
     height: 5px;
-    border-radius: 15px;  
+    border-radius: 15px;
     background: black;
-    /* outline: none; */
-  }
-  
-  .input-slider::-webkit-slider-thumb {
+}
+
+.input-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 25px;
     height: 25px;
-    border-radius: 50%; 
+    border-radius: 50%;
     background: #fff;
     cursor: pointer;
     border: 3px solid black;
-    
-  }
-  
-  .input-slider::-webkit-slider-thumb:hover {
-    scale: 120%;
-  }
+}
+
+.input-slider::-webkit-slider-thumb:active, 
+.input-slider::-webkit-slider-thumb:hover  {
+    background: #77f;
+}
+
+/* *********************** */
+
+input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    aspect-ratio: 2;
+    width: 2.5rem;
+    border-radius: 100vw;
+    outline: solid 4px black;
+    background: #ddd;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background: #77f;
+}
+
+input[type="checkbox"]:checked::after {
+    transform: translateX(100%);
+}
+
+input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    aspect-ratio: 1;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+    outline: solid 4px black;
+    border-radius: 100vw;
+    background: white;
+    transition: transform 0.1s;
+}
