@@ -5,7 +5,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #24232b;
+    background: #0a0e31;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
+}
 
-    border: 1px dotted red;
+.App h1 {
+    color: #fff;
+    margin-top: 50px;
 }

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Form.css";
 import geraSenha from "../GeraSenha";
 
-export default function Fomr({senhaNova}) {
+export default function Fomr({ senhaNova }) {
     const [inputMaiusculo, setinputMaiusculo] = useState(false);
     const [inputMinusculo, setinputMinusculo] = useState(false);
     const [inputNumero, setinputNumero] = useState(false);
@@ -41,39 +41,45 @@ export default function Fomr({senhaNova}) {
     return (
         <>
             <form className="formulario" onSubmit={Submit}>
+                <p>
+                    Tamanho: <span>{inputRange}</span>
+                </p>
                 <div className="slider">
-                    <label>
-                        Tamanho da Senha <span>{inputRange}</span>
-                    </label>
-                    <input type="range" value={inputRange} min="5" max="25" onChange={handleChangeRange} />
-                </div>
-                <div className="lista-checkbox">
                     <div>
-                        <label>
-                            <input type="checkbox" id="letrasMaiusculas" onChange={handleChangeCheckBox} />
-                            Incluir Letras Maiúsculas
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            <input type="checkbox" id="letrasMinusculas" onChange={handleChangeCheckBox} />
-                            Incluir Letras Minúsculas
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            <input type="checkbox" id="numeros" onChange={handleChangeCheckBox} />
-                            Incluir Números
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            <input type="checkbox" id="simbolos" onChange={handleChangeCheckBox} />
-                            Incluir Simbolos
-                        </label>
+                        <span data-min>5</span>
+                        <input type="range" value={inputRange} min="5" max="25" onChange={handleChangeRange} />
+                        <span data-max>25</span>
                     </div>
                 </div>
-
+                <div className="container-lista-checkbox">
+                    <p>Opções</p>
+                    <div className="lista-checkbox">
+                        <div>
+                            <label>
+                                <input type="checkbox" id="letrasMaiusculas" onChange={handleChangeCheckBox} />
+                                Incluir Letras Maiúsculas
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" id="letrasMinusculas" onChange={handleChangeCheckBox} />
+                                Incluir Letras Minúsculas
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" id="numeros" onChange={handleChangeCheckBox} />
+                                Incluir Números
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" id="simbolos" onChange={handleChangeCheckBox} />
+                                Incluir Simbolos
+                            </label>
+                        </div>
+                    </div>
+                </div>
                 <button> Gerar Senha </button>
             </form>
         </>

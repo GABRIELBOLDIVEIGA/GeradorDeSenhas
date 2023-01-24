@@ -6,8 +6,6 @@ export default function Output({ senha, placeholder }) {
         copy(senha);
     };
 
-    console.log(senha);
-
     return (
         <div className="senha-gerada">
             {<p>{senha ? senha : placeholder}</p>}
