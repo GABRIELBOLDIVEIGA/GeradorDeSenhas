@@ -47,7 +47,7 @@ export default function Fomr({ senhaNova }) {
                 <div className="slider">
                     <div>
                         <span data-min>5</span>
-                        <input type="range" value={inputRange} min="5" max="25" onChange={handleChangeRange} />
+                        <input className="input-slider" type="range" value={inputRange} min="5" max="25" onChange={handleChangeRange} />
                         <span data-max>25</span>
                     </div>
                 </div>

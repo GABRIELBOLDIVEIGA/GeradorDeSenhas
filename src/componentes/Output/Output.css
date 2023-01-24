@@ -9,16 +9,33 @@
     border-radius: 15px;
     color: black;
     border: 3px solid black;
+    box-shadow: 5px 5px;
 }
 
 .senha-gerada p {
     width: 100%;
     text-align: center;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .senha-gerada button {
-    width: 50px;
+    width: 30px;
     height: 30px;
+    border: 3px solid black;
+    box-shadow: 2px 2px;
+    border-radius: 5px;
+    background-color: transparent;
     margin-right: 10px;
+    background-image: url("../../../public/icon.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+
+.senha-gerada button:active {
+    transition: all 150ms ease;
+    transform: translateY(-3%);
+    scale: 102%;
 }

@@ -9,7 +9,7 @@ export default function Output({ senha, placeholder }) {
     return (
         <div className="senha-gerada">
             {<p>{senha ? senha : placeholder}</p>}
-            <button onClick={copiar}> Copiar </button>
+            <button onClick={copiar}></button>
         </div>
     );
 }

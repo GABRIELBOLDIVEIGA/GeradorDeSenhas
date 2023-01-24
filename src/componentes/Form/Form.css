@@ -7,11 +7,13 @@
 }
 
 .formulario P {
+    font-weight: 600;
     color: rgba(255, 255, 255, 0.5);
 }
 
 .formulario p span {
-    color: #fff;
+    color: black;
+    font-weight: 600;
 }
 
 .formulario .slider {
@@ -21,20 +23,22 @@
     border-radius: 15px;
 
     height: 50px;
-
+    font-weight: 600;
     /* background-color: rgba(255, 255, 255, 0.08); */
     background-color: #ffc900;
     color: black;
     border: 3px solid black;
+    box-shadow: 5px 5px;
 }
 
 .slider div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .slider input {
-    width: 80%;
+    width: 70%;
     cursor: pointer;
 }
 
@@ -51,8 +55,7 @@
 }
 
 .formulario button {
-    user-select: none;
-    position: relative;
+    
     width: 100%;
     height: 50px;
     margin: 10px 0;
@@ -67,10 +70,12 @@
     cursor: pointer;
     transition: all 150ms ease;
     font-weight: 900;
+    box-shadow: 5px 5px;
 }
 
 .formulario button:active {
     transform: translateY(-3%);
+    scale: 102%;
     /* box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08); */
 
 }
@@ -96,8 +101,36 @@
     cursor: pointer;
     color: black;
     border: 3px solid black;
+    box-shadow: 5px 5px;
 }
 
 .lista-checkbox label {
     padding-left: 15px;
 }
+
+/* ******************************************* */
+
+.input-slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 5px;
+    border-radius: 15px;  
+    background: black;
+    /* outline: none; */
+  }
+  
+  .input-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #fff;
+    cursor: pointer;
+    border: 3px solid black;
+    
+  }
+  
+  .input-slider::-webkit-slider-thumb:hover {
+    scale: 120%;
+  }
