@@ -2,15 +2,19 @@
     display: flex;
     align-items: center;
     color: #fff;
-    background-color: rgba(255, 255, 255, 0.08);
+    /* background-color: rgba(255, 255, 255, 0.08); */
+    background-color: #ffc900;
     height: 50px;
     width: 90%;
     border-radius: 15px;
+    color: black;
+    border: 3px solid black;
 }
 
 .senha-gerada p {
     width: 100%;
     text-align: center;
+    font-weight: 700;
 }
 
 .senha-gerada button {
